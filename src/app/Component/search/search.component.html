@@ -1,0 +1,115 @@
+<div class="container text-center">
+    <!-- <h1>{{title}}</h1> -->
+    <!-- <script>
+
+      function searchBtn(ngModel){
+        [(ngModel)]="searchText";
+      }
+    </script> -->
+    <script>
+        
+
+    </script>
+  
+  <div class="container">
+
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- <div class="container-fluid"> -->
+        <!-- <div class="container"> -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span class="nav-link" aria-current="page" href="#">Total ({{orders.length}})</span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link" aria-current="page" href="#">In Progress</span>
+              </li>
+              
+            
+            </ul>
+          <form class="d-flex" role="search">
+            
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search ">
+            <button  class="btn btn-outline-success btn-md" type="submit" (click)="searchBtn()"><i class="las la-search"></i></button>
+              
+            
+          </form>
+        
+        <!-- </div> -->
+      </div>
+    </nav>
+  </div> 
+  
+
+
+    <!-- <div class="row"> -->
+      
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>User Id</th>
+          <th>Food Name</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let order of orders | filter:searchText">
+          <!-- <tr *ngFor="let order of orders"> -->
+          <td>{{order.cartid}}</td>
+          <td>{{order.prodname}}</td>
+          <!-- <td></td> -->
+          <td><select name="status"  >
+            <!-- 
+          [(ngModel)]="selectedValue"> -->
+            <!-- [(ngModel)]="selectedValue"  ng-model="data.singleSelect"> -->
+            
+           <option value="In Progress" >{{order.status}}</option> 
+           <option value="In Progress">In Progress</option> 
+            <option value="Ready">Ready</option>
+
+          </select> </td>
+          <td><button [ngClass] = "{'in-progress':order.status==='in progress','ready':order.status==='Ready'}" id="btn1"  for="btnControl" class ="btn btn-sm btn-primary btn-block" (click) = "changeStatus(order)">submit</button></td>
+          <!-- <td><input (click) = "changeStatus(orders)"  class = "submitBtn" type="button" value="Submit" /></td> -->
+          <!-- <td>{{hero.country}}</td> -->
+          <!-- <td>
+            <div class="btn-group">
+              <form action="/submit" method="post"> -->
+                 <!-- <select name="status" >--><!--[(ngModel)]="selectedValue"  ng-model="data.singleSelect"> -->
+                    
+                  <!--  <option value="Preparing">In Progress</option>
+                    <option value="Ready">Ready</option>
+                </select> -->
+               <!-- <td>{{user.name}}</td>
+                <input (click) = "status()"  class = "submitBtn" type="submit" value="Submit" />
+              </form>
+            </div>
+          </td> -->
+          
+        </tr>
+        </tbody>
+      </table>
+      
+    <!-- </div> -->
+  </div>
+  <!-- <div >
+    <form id="statusForm" action="/submit" method="post">
+      <select name="status">
+          
+          <option value="Preparing">Preparing</option>
+          <option value="Ready">Ready</option>
+      </select>
+      <input class = "submitBtn" type="submit" value="Submit" />
+    </form>
+  </div> -->
+
+  

@@ -1,0 +1,35 @@
+
+i{
+padding-left: 35px;
+padding-bottom: 25px;
+}
+.las{
+  justify-content: right;
+}
+
+body{
+  /* background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fartmakespeople.com%2Fcute-doodles-to-draw%2F&psig=AOvVaw3He-YkfrKmgltG-0wYE3k3&ust=1687352159932000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPj7_OLy0f8CFQAAAAAdAAAAABAF"); */
+  /* background-color: rgb(196, 235, 235); */
+  background: linear-gradient(0.25turn, #393d3e, #ebf8e1, #2d4f1c);
+  height: 27%;
+}
+
+  h2{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+.table{
+    /* background-color: rgb(0, 16, 11); */
+    text-align: center;
+   
+}
+.mainContainer{
+  height: 50%;
+  background-color: blue;
+}
+.submitBtn{
+  margin-left: 2rem;
+}
+
