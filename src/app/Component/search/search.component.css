@@ -65,8 +65,12 @@
 }
 
 .in-progress{
-  background-color: rgb(216, 63, 36);
+  background-color: rgb(201, 36, 7);
 }
 .ready{
   background-color: green;
+  
+}
+h1{
+  text-align: center;
 }
